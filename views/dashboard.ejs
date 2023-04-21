@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/dashboard.css">
+
+<div class="main-card row mt-5">
+  <div class=" col-md-6 m-auto ">
+    <h1 class="mt-4">Welcome <%=name%>!</h1>
+    <p class="lead mb-4">Let's get started.</p>
+    <div class="card card-body">
+
+      <form>
+
+        <button type="button" class="btn btn-primary btn-block"><a style="color: white" href="/users/room">Create a meeting</a></button>
+
+      </form>
+
+      <p class="text-center mb-3 lead mt-4">or</p>
+
+      <form action="/users/chat" method="POST">
+        <div class="form-group">
+          <input type="text" id="room_id" name="room_id" class="form-control" placeholder="Enter Room Id: ">
+        </div>
+
+        <button type="submit" value="<%=name %>" class="btn btn-info btn-block">Join Room</button>
+      </form>
+
+    </div>
+
+    <a style="margin-top: 30px; background-color: #555" href="/users/logout" class="btn btn-secondary">Logout</a>
+  </div>
+
+</div>
